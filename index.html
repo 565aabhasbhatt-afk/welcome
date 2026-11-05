@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>A Special Thank You</title>
+
+  <!-- Calligraphic fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Sparkles will appear inside this container -->
+  <div class="sparkles-container" id="sparkles"></div>
+
+  <main class="thank-you-card">
+
+    <!-- Left-side image -->
+    <div class="image-container left-image">
+      <img src="assets/left-image.jpg"
+           alt="Decorative image on the left" />
+    </div>
+
+    <!-- Main message -->
+    <section class="message">
+
+      <p class="small-heading"></p>
+
+      <h1>Thank You</h1>
+
+      <h2>Bakshpreet Kaur</h2>
+
+      <p class="subtitle">
+        for your gracious presence
+      </p>
+
+      <!-- Music and sparkle trigger -->
+      <button id="musicButton" type="button">
+        <span id="buttonIcon">♫</span>
+        <span id="buttonText">Play Music</span>
+        <span>✨</span>
+      </button>
+
+      <p class="footer-text">
+        
+      </p>
+
+    </section>
+
+    <!-- Right-side image -->
+    <div class="image-container right-image">
+      <img src="assets/right-image.jpg"
+           alt="Decorative image on the right" />
+    </div>
+
+  </main>
+
+  <!-- Replace song.mp3 with your licensed audio file -->
+  <audio id="backgroundMusic" preload="metadata">
+    <source src="assets/Aaye Ho Meri Zindagi Mein _ Udit Narayan _ Aamir _ Karisma _ Evergreen Love Song - (320 Kbps).mp3" type="audio/mpeg" />
+   
+  </audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

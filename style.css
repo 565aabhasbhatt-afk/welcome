@@ -1,0 +1,181 @@
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(
+    135deg,
+    #ffe4ec,
+    #ffd1df,
+    #fff0f5
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+  color: #a93665;
+}
+
+/* Main layout */
+.thank-you-card {
+  width: min(1100px, 95%);
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  padding: 40px 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Text section */
+.message {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+.small-heading {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.message h1,
+.message h2 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  color: #c04478;
+}
+
+.message h1 {
+  font-size: clamp(48px, 7vw, 82px);
+}
+
+.message h2 {
+  font-size: clamp(36px, 5vw, 60px);
+  margin-top: 8px;
+}
+
+.subtitle {
+  font-size: clamp(13px, 2vw, 17px);
+  margin-top: 14px;
+  color: #9f456b;
+}
+
+/* Side images */
+.image-container {
+  width: 210px;
+  flex-shrink: 0;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 120px 120px 18px 18px;
+  box-shadow: 0 12px 30px #c0447820;
+}
+
+/* Music button */
+#musicButton {
+  margin-top: 32px;
+  padding: 14px 28px;
+
+  border: none;
+  border-radius: 40px;
+
+  background: #e75480;
+  color: white;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+
+  box-shadow: 0 6px 18px #e7548040;
+  transition: transform 0.25s, background 0.25s;
+}
+
+#musicButton:hover {
+  transform: translateY(-3px);
+  background: #cf3d6d;
+}
+
+.footer-text {
+  margin-top: 24px;
+  font-family: "Great Vibes", cursive;
+  font-size: 26px;
+}
+
+/* Sparkles layer */
+.sparkles-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Each sparkle is created by JavaScript */
+.sparkle {
+  position: absolute;
+  top: -30px;
+  color: #ffffff;
+  text-shadow: 0 0 8px #ff69b4;
+  animation: sparkle-fall linear forwards;
+}
+
+@keyframes sparkle-fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .thank-you-card {
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 30px 12px;
+  }
+
+  .image-container {
+    width: 100px;
+  }
+
+  .message {
+    flex-basis: 100%;
+    order: -1;
+  }
+
+  .image-container img {
+    border-radius: 60px 60px 12px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sparkle {
+    animation-duration: 0.01ms;
+  }
+}
